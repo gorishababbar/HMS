@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HOTEL GP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <link rel = "icon" href = "images/logo.png" type = "image/png">
+    </head>
+    <body>
+        
+        <!-- header -->
+        <header class = "header" id = "header">
+            <div class = "head-top">
+                <div class = "site-name">
+                    <span>Welcome to Tranquil Trove.</span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+
+            <div class = "head-bottom flex">
+                <h2>TRANQUIL TROVE - A NICE AND COMFORTABLE PLACE TO STAY</h2>
+                <p>Welcome to our premier hotel booking platform, where luxury meets convenience. Explore our curated selection of exquisite accommodations worldwide, designed to cater to every traveler's needs and preferences. With user-friendly search options, seamless booking processes, and a commitment to exceptional customer service, we make planning your next getaway effortless. Whether you seek a relaxing beachfront retreat, a vibrant urban escape, or a cozy countryside hideaway, let us be your gateway to unforgettable travel experiences.</p>
+                <button type = "button" class = "head-btn" onclick="redirectToLoginPage()">GET STARTED</button>
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- side navbar -->
+        <div class = "sidenav" id = "sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+            <ul class = "navbar">
+                <li><a href = "#header">home</a></li>
+                <li><a href = "#services">services</a></li>
+                <li><a href = "#rooms">rooms</a></li>
+                <li><a href = "#customers">customers</a></li>
+            </ul>
+            <button class = "btn sign-up" onclick="redirectToLoginPage()">sign up</button>
+            <button class = "btn log-in" onclick="redirectToSignupPage()">log in</button>
+        </div>
+        <!-- end of side navbar -->
+
+        <!-- fullscreen modal -->
+        <div id = "modal"></div>
+        <!-- end of fullscreen modal -->
+
+        <!-- body content  -->
+        <section class = "services sec-width" id = "services">
+            <div class = "title">
+                <h2>services</h2>
+            </div>
+            <div class = "services-container">
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-utensils"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Food Service/ Food Runner</h2>
+                        <p>
+                            Indulge your palate with our exceptional food service experience. From gourmet cuisine to casual dining options, we're dedicated to delivering delicious meals tailored to your taste. Whether you're hosting a corporate event, celebrating a special occasion, or simply craving culinary delights, our expert chefs and attentive staff ensure every bite exceeds your expectations. Elevate your dining experience with us and savor the flavors of excellence.</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-swimming-pool"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Refreshment</h2>
+                        <p>Quench your thirst and delight your senses with our refreshing selection of beverages and snacks. Whether you're in need of a revitalizing pick-me-up or a satisfying treat, our assortment of refreshments is sure to satisfy every craving. From freshly brewed coffee to chilled beverages and tasty snacks, we've got just what you need to stay energized and satisfied throughout your day. Discover a world of refreshment with us.</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-broom"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Housekeeping</h2>
+                        <p>
+                            Experience the epitome of cleanliness and comfort with our dedicated housekeeping services. Our meticulous team ensures every corner of your space is impeccably maintained, allowing you to relax and unwind in a pristine environment. From fresh linens to spotless surfaces, we take care of the details so you can focus on enjoying your stay. Trust us to exceed your expectations and elevate your experience with our unwavering commitment to cleanliness and hospitality.</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-door-closed"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Room Security</h2>
+                        <p>Your peace of mind is our top priority. Our comprehensive room security measures are designed to provide you with a safe and secure environment throughout your stay. From state-of-the-art electronic locks to 24/7 surveillance, we employ the latest technologies and protocols to safeguard your belongings and ensure your well-being. Rest easy knowing that your comfort and security are our utmost concern, allowing you to relax and enjoy your time with confidence.</p>
+                        <button type = "button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+            </div>
+        </section>
+
+        <div class = "book">
+            <form class = "book-form">
+                <div class = "form-item">
+                    <label for = "checkin-date">Check In Date: </label>
+                    <input type = "date" id = "chekin-date">
+                </div>
+                <div class = "form-item">
+                    <label for = "checkout-date">Check Out Date: </label>
+                    <input type = "date" id = "chekout-date">
+                </div>
+                <div class = "form-item">
+                    <label for = "adult">Adults: </label>
+                    <input type = "number" min = "1" value = "1" id = "adult">
+                </div>
+                <div class = "form-item">
+                    <label for = "children">Children: </label>
+                    <input type = "number" min = "1" value = "1" id = "children">
+                </div>
+                <div class = "form-item">
+                    <label for = "rooms">Rooms: </label>
+                    <input type = "number" min = "1" value = "1" id = "rooms">
+                </div>
+                <div class = "form-item">
+                    <input type = "submit" class = "btn" value = "Book Now">
+                </div>
+            </form>
+        </div>
+
+        <section class = "rooms sec-width" id = "rooms">
+            <div class = "title">
+                <h2>rooms</h2>
+            </div>
+            <div class = "rooms-container">
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "images/img1.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Standard Rooms</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Cozy ambiance: Embrace the warmth and intimacy of our thoughtfully designed space, perfect for unwinding after a day of exploration.
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Convenient amenities: Enjoy the convenience of in-room coffee and tea facilities, ensuring you start your day on the right note or indulge in a comforting beverage any time you desire.
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Value for money: Experience comfort and quality without breaking the bank, as our Standard Room offers affordability without compromising on comfort or style.
+                            </li>
+                        </ul>
+                        <p>A cozy retreat designed for your comfort and convenience. This well-appointed space offers everything you need for a relaxing stay without compromising on style. Unwind on the comfortable queen-size bed, outfitted with soft linens and plush pillows for a restful night's sleep. Stay connected with complimentary high-speed Wi-Fi and catch up on your favorite shows on the flat-screen TV. The compact ensuite bathroom features a refreshing shower and essential amenities for your convenience. With thoughtful touches and efficient use of space, our Standard Room provides a comfortable haven for your travels.</p>
+                        <p class = "rate">
+                            <span>$199.00 /</span> Per Night
+                        </p>
+                        <button type = "button" class = "btn">book now</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "images/img2.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Deluxe Rooms</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Plush king-size bed with premium linens for a restful night's sleep.
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Stunning city views to enhance your stay and create a memorable backdrop.
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Attentive room service available to cater to your every need.
+                            </li>
+                        </ul>
+                        <p>Step into luxury with our Deluxe King Room, where comfort and style converge to create a haven of relaxation. This spacious retreat boasts contemporary design elements and plush furnishings, inviting you to unwind in sophistication. Sink into the king-size bed adorned with premium linens, ensuring a restful night's sleep. Enjoy the convenience of modern amenities, including a flat-screen TV, high-speed Wi-Fi, and a work desk for productivity on the go. The sleek ensuite bathroom features a rainfall shower and luxurious toiletries for a rejuvenating experience. With stunning city views and attentive room service, every detail is meticulously crafted to elevate your stay to new heights of indulgence.</p>
+                        <p class = "rate">
+                            <span>$399.00 /</span> Per Night
+                        </p>
+                        <button type = "button" class = "btn">book now</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "images/img3.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Single Rooms</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Compact Comfort: This room maximizes space for a restful stay, perfect for solo travelers on the go.
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Modern Essentials: Enjoy a dedicated workspace, calming décor, and all the essentials to recharge and refresh.
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Prime Location: Your perfectly sized haven serves as a launchpad for exploring the city's vibrant core.
+                            </li>
+                        </ul>
+                        <p>Dive into sleek minimalism or micro-escape adventures! Our single rooms offer perfectly-sized havens for solo explorers. Think calming neutrals, dedicated workspaces, and cozy comfort - all designed to recharge and launch you into the city's heart.</p>
+                        <p class = "rate">
+                            <span>$99.00 /</span> Per Night
+                        </p>
+                        <button type = "button" class = "btn">book now</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+            </div>
+        </section>
+
+
+        <section class = "customers" id = "customers">
+            <div class = "sec-width">
+                <div class = "title">
+                    <h2>customers</h2>
+                </div>
+                <div class = "customers-container">
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>We Loved it</h3>
+                        <p>I had an amazing experience booking with this website! The interface was user-friendly, making it easy to find the perfect hotel for my trip. The room exceeded my expectations, and the customer service was exceptional. I'll definitely be using this site for all my future travels.</p>
+                        <img src = "images/cus1.jpg" alt = "customer image">
+                        <span>Riya, India</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Comfortable Living</h3>
+                        <p>I can't say enough good things about the hotel I booked through this website. The room was clean, comfortable, and exactly as described. The staff went above and beyond to ensure my stay was enjoyable, and the amenities were top-notch. I highly recommend booking with this site for a hassle-free experience.</p>
+                        <img src = "images/Person1.png" alt = "customer image">
+                        <span>Alynna, Australia</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Nice Place</h3>
+                        <p>I recently used this website to book a last-minute getaway, and I'm so glad I did! The hotel I stayed at was fantastic - clean, comfortable, and conveniently located. The booking process was seamless, and I appreciated the flexibility in choosing my check-in and check-out dates. I highly recommend this site to anyone looking for a stress-free booking experience.</p>
+                        <img src = "images/Person2.jpg" alt = "customer image">
+                        <span>Olivia, Canada</span>
+                    </div>
+                    <!-- end of single customer -->
+                </div>
+            </div>
+        </section>
+        <!-- end of body content -->
+        
+        <!-- footer -->
+        <footer class = "footer">
+            <div class = "footer-container">
+                <div>
+                    <h2>About Us </h2>
+                    <p>Welcome to 'If Luna Is Fine' - your gateway to hassle-free travel. With a focus on convenience and quality, we're here to ensure every journey is memorable. Trust us to simplify your travel experience, one booking at a time.</p>
+                    <ul class = "social-icons">
+                        <li class = "flex">
+                            <i class = "fa fa-twitter fa-2x"></i>
+                        </li>
+                        <li class = "flex">
+                            <i class = "fa fa-facebook fa-2x"></i>
+                        </li>
+                        <li class = "flex">
+                            <i class = "fa fa-instagram fa-2x"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Useful Links</h2>
+                    <a href = "#">Blog</a>
+                    <a href = "#">Rooms</a>
+                    <a href = "#">Subscription</a>
+                    <a href = "#">Gift Card</a>
+                </div>
+
+                <div>
+                    <h2>Privacy</h2>
+                    <a href = "#">Career</a>
+                    <a href = "#">About Us</a>
+                    <a href = "#">Contact Us</a>
+                    <a href = "#">Services</a>
+                </div>
+
+                <div>
+                    <h2>Have A Question</h2>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+                        <span>
+                            XYZ
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span>
+                            +91-567-----
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            abc@domain.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+        
+        <script src="script.js"></script>
+        <script src="sql.js"></script>
+    </body>
+</html>
