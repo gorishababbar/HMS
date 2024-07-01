@@ -1,3 +1,2 @@
 # HMS
- Hotel Management System using HTML, CSS and JS with Firebase and PHP backend
- 
+ Hotel Management System using HTML, CSS and JS with Firebase and PHP for backend
